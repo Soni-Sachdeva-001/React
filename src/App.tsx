@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Header} from "./components/header/header";
+import {AddPage} from "./components/Screen/AddPage/AddPage";
+import {BasicInfo} from "./components/basicInfo/basicInfo";
+import {Box, Grid} from "@material-ui/core";
+import {ImagePicker} from "./components/imagePicker/imagePicker";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box >
+        <Box>
+            <Header/>
+        </Box>
+
+        <Box mt={10} ml={5} mr={5}>
+            <hr/>
+        </Box>
+
+        <Box mt={2}>
+            <BasicInfo />
+        </Box>
+
+        <Box ml={5} mr={5}>
+            <hr/>
+        </Box>
+        <Box>
+            <AddPage/>
+        </Box>
+                    {/*<ImagePicker />*/}
+
+        </Box>
   );
 }
 
